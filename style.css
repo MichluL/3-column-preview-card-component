@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+:root {
+     --clr_paragraph: hsla(0, 0%, 100%, 0.75);
+     --clr_other: hsl(0, 0%, 95%);
+}
+body {
+     height: 100vh;
+     /* font-family: 'Big Shoulders Display', cursive; */
+     font-family: "Lexend Deca", sans-serif;
+     background-color: var(--clr_other);
+     display: grid;
+     place-items: center;
+}
+.column_container {
+     display: flex;
+}
+.column {
+     width: 19.5rem;
+     padding: 2.5rem;
+     padding-right: 4rem;
+}
+.column_title {
+     font-family: "Big Shoulders Display", cursive;
+     font-weight: 700;
+     font-size: 2.5rem;
+     text-transform: uppercase;
+     color: var(--clr_other);
+     margin-block: 3rem;
+}
+.column_description {
+     font-size: 0.9375rem;
+     color: var(--clr_paragraph);
+     line-height: 1.6;
+     margin-bottom: 4rem;
+}
+.column_button {
+     border: none;
+     padding: 1rem 2rem;
+     border-radius: 100px;
+     background-color: var(--clr_other);
+     color: hsl(31, 77%, 52%);
+     font-size: 0.9375rem;
+     font-weight: lighter;
+     transition: 0.4s;
+     cursor: pointer;
+     border: 2px solid var(--clr_paragraph);
+}
+.column_button:hover {
+     background-color: transparent;
+     color: var(--clr_paragraph);
+     border: 2px solid var(--clr_paragraph);
+}
+.column:nth-child(1) {
+     background-color: hsl(31, 77%, 52%);
+     border-top-left-radius: 0.5rem;
+     border-bottom-left-radius: 0.5rem;
+}
+.column:nth-child(2) {
+     background-color: hsl(184, 100%, 22%);
+}
+.column:nth-child(3) {
+     background-color: hsl(179, 100%, 13%);
+     border-top-right-radius: 0.5rem;
+     border-bottom-right-radius: 0.5rem;
+}
+@media (max-width: 375px) {
+     body {
+          padding: 1.875rem 1.25rem;
+     }
+     .column_container {
+          flex-direction: column;
+     }
+     .column:nth-child(1) {
+          border-top-left-radius: 0.5rem;
+          border-top-right-radius: 0.5rem;
+          border-bottom-left-radius: 0;
+     }
+     .column:nth-child(3) {
+          border-bottom-left-radius: 0.5rem;
+          border-bottom-right-radius: 0.5rem;
+          border-top-right-radius: 0;
+     }
+     .column_title {
+          margin-block: 1.5rem;
+     }
+     .column_description {
+          margin-bottom: 2rem;
+     }
+     .column_button {
+          padding: 0.5rem 2rem;
+     }
+}
